@@ -1,0 +1,125 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0px 0px 14px 0px rgba(112, 121, 153, 0.30);
+  border-radius: 15px;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.tickets {
+  display: flex;
+  flex-direction: column;
+}
+
+.ticket {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  height: 200px;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.type {
+  border-radius: 15px 0px;
+  padding: 7px;
+  background-color: #8BA5D8;
+  color: white;
+  position: absolute;
+  left: 0;
+  top: 0
+}
+
+.company {
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.ticketInfo {
+  display: flex;
+  margin-left: 40px;
+
+  .flightInfo {
+    display: flex;
+    flex-direction: column;
+    margin-right: 35px;
+    margin-left: 35px;
+
+    .time {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+  }
+
+  .flightSchema {
+  }
+
+  .schema {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 35px;
+
+    .airport {
+      width: 14px;
+      height: 14px;
+      background-color: #C4C4C4;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+
+      .airportName {
+        color: #B7BAC1;
+        font-size: 14px;
+        position: absolute;
+        top: -30px;
+      }
+    }
+
+    .flightLine {
+      width: 269px; /* Ширина линии (можете настроить под нужное значение) */
+      height: 2px;
+      background-color: #B7BAC1;
+    }
+  }
+
+  .flightTime {
+    font-size: 16px;
+    color: #B7BAC1;
+  }
+}
+
+.timeOptions {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-self: start;
+  align-items: center;
+  margin-left: 70px;
+}
+
+.verticalLine {
+  width: 1px;
+  height: 200px;
+  background-color: #DDE3EE;
+  margin-left: 35px;
+}
+.dashedLine {
+  border-bottom: 1px dashed #DDE3EE; /* dashed - пунктирный стиль, замените цвет и ширину по вашим требованиям */
+  width: 100%;
+}
+
+.cost {
+  margin-left: 35px;
+  margin-right: 35px;
+  font-size: 32px;
+  font-weight: 700;
+}
+

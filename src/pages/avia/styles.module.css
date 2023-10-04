@@ -1,0 +1,32 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 0px 0px 14px 0px rgba(112, 121, 153, 0.30);
+}
+
+.inputs {
+    background-color: #5C87DB;
+    display: flex;
+    gap: 25px;
+    height: 100px;
+    align-items: center;
+    padding-top: 27px;
+    flex-shrink: 0;
+    border-radius: 15px 15px 0px 0px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.inputs > {
+    background-color: white;
+    height: 40px;
+}
+
+.button {
+    display: flex;
+    height: 86px;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 30px;
+    border-radius: 0px 0px 15px 15px;
+}
