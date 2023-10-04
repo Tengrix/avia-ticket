@@ -1,10 +1,15 @@
 import './App.css'
-import {Outlet} from "react-router-dom";
+import { Route, Routes} from "react-router-dom";
+import Avia from "./pages/avia/avia";
+import Info from "./pages/info/info";
 
 const App = () => {
     return (
         <div>
-            <Outlet/>
+                <Routes>
+                    <Route path="/avia" element={<Avia/>} />
+                    <Route path="/avia/info" element={<Info/>} />
+                </Routes>
         </div>
 
     );
