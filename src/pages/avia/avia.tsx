@@ -1,4 +1,4 @@
-import {Controller, useForm} from "react-hook-form";
+import {Control, Controller, FieldValues, useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
 import CustomTextField from "./../../components/CustomTextField/CustomTextField";
 import {searchTicketSchema, SearchTicketType} from "./../../shared/utils/zodSchemas/searchTicketSchema";
@@ -62,7 +62,7 @@ const Avia = memo(() => {
                                 onChange={(e) => field.onChange(e)}
                             />)
                         }/>
-                    <DatePicker label={"Туда"} name={"depDate"} control={control}/>
+                    <DatePicker label={"Туда"} name={"depDate"} control={(control as unknown) as Control<FieldValues>}/>
                     <DatePicker label={"Обратно"} name={"arrDate"} control={control}/>
                 </div>
                 <div className={s.button}>

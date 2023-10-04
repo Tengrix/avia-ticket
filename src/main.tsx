@@ -10,21 +10,26 @@ import Info from "./pages/info/info";
 
 const router = createBrowserRouter([
     {
-        path: "/avia",
-        element: <Avia/>
-    },
-    {
-        path: "/avia/info",
-        element: <Info/>
+        path: "/",
+        element: <App/>,
+        children: [
+            {
+                path: "avia",
+                element: <Avia/>
+            },
+            {
+                path: "avia/info",
+                element: <Info/>
+            }
+        ]
     }
+
 ])
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
         <Provider store={store}>
-            <RouterProvider router={router}>
-                <App/>
-            </RouterProvider>
+            <RouterProvider router={router}/>
         </Provider>
     </React.StrictMode>,
 )

@@ -2,7 +2,6 @@ import ReactDatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import {Control, FieldPath, FieldValues, useController} from 'react-hook-form';
 import CustomTextField from "./../CustomTextField/CustomTextField";
-import {memo} from "react";
 
 
 type Props<TFieldValues extends FieldValues> = {
@@ -28,7 +27,6 @@ const DatePicker = <TFieldValues extends FieldValues>(props: Props<TFieldValues>
                 placeHolder={"дд.мм.гг"}
                 label={props.label}
                 value={field.value}
-
             />
             }
             dateFormat={'dd.MM.yyyy'}
@@ -36,4 +34,4 @@ const DatePicker = <TFieldValues extends FieldValues>(props: Props<TFieldValues>
     );
 };
 
-export default memo(DatePicker);
+export default DatePicker;

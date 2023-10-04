@@ -1,12 +1,10 @@
 import './App.css'
-import {createBrowserRouter, Route, RouterProvider, Routes} from "react-router-dom";
-import Avia from "./pages/avia/avia";
-
-
+import {Outlet} from "react-router-dom";
 
 const App = () => {
     return (
         <div>
+            <Outlet/>
         </div>
 
     );

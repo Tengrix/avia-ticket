@@ -12,6 +12,7 @@ const Info = () => {
     const ticketInfo = useAppSelector(state => state.search.ticketInfo)
     const [flightTime, setFlightTime] = useState(['09:30', '10:45'])
     const navigate = useNavigate()
+    const id = useId()
     const {departure, arrival, depDate, arrDate} = ticketInfo
     const timeOptions = [
         {
@@ -27,7 +28,7 @@ const Info = () => {
             arrTime: '05:45'
         },
     ]
-    const ticketCost = new Intl.NumberFormat('ru-RU').format('7950') + ' ₽'
+    const ticketCost = new Intl.NumberFormat('ru-RU').format(7950) + ' ₽'
 
     return (
         <div>
@@ -69,7 +70,7 @@ const Info = () => {
                             </div>
                             <div className={s.timeOptions}>
                                 {!arrDate && timeOptions.map(time => (
-                                    <TimeButton key={useId()}
+                                    <TimeButton key={id}
                                                 isCurrent={flightTime[0] === time.depTime && flightTime[1] === time.arrTime}
                                                 depTime={time.depTime} arrTime={time.arrTime}
                                                 onClick={() => setFlightTime([time.depTime, time.arrTime])}/>
@@ -117,7 +118,7 @@ const Info = () => {
                                     </div>
                                     <div className={s.timeOptions}>
                                         {!arrDate && timeOptions.map(time => (
-                                            <TimeButton key={useId()}
+                                            <TimeButton key={id}
                                                         isCurrent={flightTime[0] === time.depTime && flightTime[1] === time.arrTime}
                                                         depTime={time.depTime} arrTime={time.arrTime}
                                                         onClick={() => setFlightTime([time.depTime, time.arrTime])}/>

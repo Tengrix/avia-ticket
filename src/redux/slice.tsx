@@ -6,7 +6,7 @@ const initialState = {
         departure: 'Moscow',
         arrival: 'Mersin',
         depDate: new Date(0),
-        arrDate: new Date(0),
+        arrDate: new Date(0) as Date|undefined
     }
 }
 
@@ -15,7 +15,7 @@ const searchSlice = createSlice({
     initialState,
     reducers: {
         setSearchParams: (state, action: PayloadAction<SearchTicketType>) => {
-            state.ticketInfo = action.payload
+            state.ticketInfo = {...action.payload,arrDate:action.payload.arrDate?action.payload.arrDate:undefined}
         },
     }
 })
