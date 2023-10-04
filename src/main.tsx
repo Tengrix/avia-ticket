@@ -25,7 +25,7 @@ const routes = [
     },
 
 ]
-const router = createBrowserRouter(routes,{basename:'/avia-ticket/'})
+const router = createBrowserRouter(routes, {basename:'/'})
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
