@@ -1,32 +1,36 @@
+import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
+import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import Avia from "./pages/avia/avia";
 import {Provider} from "react-redux";
 import {store} from "./redux/store";
-import {HashRouter} from "react-router-dom";
+import Info from "./pages/info/info";
 
-// const router = createBrowserRouter([
-//     {
-//         path: "/",
-//         element: <App/>,
-//         children: [
-//             {
-//                 path: "avia",
-//                 element: <Avia/>
-//             },
-//             {
-//                 path: "avia/info",
-//                 element: <Info/>
-//             }
-//         ]
-//     }
-//
-// ])
+const routes = [
+    {
+        path: "/",
+        element: <App/>,
+        children: [
+            {
+                path: "avia",
+                element: <Avia/>
+            },
+            {
+                path: "avia/info",
+                element: <Info/>
+            }
+        ]
+    },
+
+]
+const router = createBrowserRouter(routes,{basename:'/avia-ticket/'})
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-    <HashRouter basename={'/avia-ticket/'}>
+    <React.StrictMode>
         <Provider store={store}>
-            <App/>
+            <RouterProvider router={router}/>
         </Provider>
-    </HashRouter>
+    </React.StrictMode>,
 )
